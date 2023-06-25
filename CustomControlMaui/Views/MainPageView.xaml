@@ -4,9 +4,28 @@
              x:Class="CustomControlMaui.Views.MainPageView" 
              xmlns:control="clr-namespace:CustomControlMaui.Controls"
              Title="MainPageView">
-    <StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"></RowDefinition>
 
-        <control:BottomMenu Background="#fff" HorizontalOptions="Center"></control:BottomMenu>
-    </StackLayout>
+            <RowDefinition Height="65*"></RowDefinition>
+
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Fill" />
+        <Frame BorderColor="#FFFFFF" BackgroundColor="#FFFFFF" Grid.Row="1" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Margin="0" Padding="0" HasShadow="False" IsClippedToBounds="True">
+             
+        </Frame>
+        
+        <control:BottomMenu Background="#fff" Grid.Row="3" Grid.Column="0"  HorizontalOptions="FillAndExpand" VerticalOptions="End"></control:BottomMenu>
+        
+    </Grid>
+   
+
+     
 
 </ContentPage>
